@@ -91,7 +91,7 @@ class PluginManager
 
     /**
      * Adds a reference of this object to $instance, populates default strings,
-     * does the tgmpa_init action hook, and hooks in the interactions to init.
+     * does the required_plugins_init action hook, and hooks in the interactions to init.
      *
      * @see PluginManager::init()
      */
@@ -118,7 +118,7 @@ class PluginManager
         );
 
         /** Annouce that the class is ready, and pass the object (for advanced use) */
-        do_action( 'tgmpa_init', $this );
+        do_action( 'required_plugins_init', $this );
     }
 
     public static function getInstance()
@@ -141,7 +141,7 @@ class PluginManager
      */
     public function init()
     {
-        do_action( 'tgmpa_register' );
+        do_action( 'required_plugins_register' );
         /** After this point, the plugins should be registered and the configuration set */
 
         /** Proceed only if we have plugins to handle */
