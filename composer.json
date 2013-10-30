@@ -23,6 +23,10 @@
     "autoload": {
         "psr-0": { "WMC\\Wordpress\\RequiredPlugins": "src/" }
     },
+    "require": {
+        "wemakecustom/wp-mu-composer": "*",
+        "composer/installers": "~1.0"
+    },
     "extra": {
         "installer-name": "required-plugins"
     }
