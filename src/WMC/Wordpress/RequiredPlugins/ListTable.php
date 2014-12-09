@@ -50,7 +50,7 @@ class ListTable extends \WP_List_Table
      * Thickbox is only loaded if the user has not dismissed the admin
      * notice or if there are any plugins left to install and activate.
      */
-    private static function thickbox()
+    public static function thickbox()
     {
         if ( ! get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice', true ) )
             add_thickbox();

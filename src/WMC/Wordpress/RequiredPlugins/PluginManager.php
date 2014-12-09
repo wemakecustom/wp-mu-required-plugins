@@ -168,7 +168,7 @@ class PluginManager
             if ($this->has_notices) {
                 add_action( 'admin_notices', array( &$this, 'notices' ) );
                 add_action( 'admin_init', array( &$this, 'admin_init' ), 1 );
-                add_action( 'admin_enqueue_scripts', array( &$this, 'thickbox' ) );
+                add_action( 'admin_enqueue_scripts', array( 'WMC\Wordpress\RequiredPlugins\ListTable', 'thickbox' ) );
                 add_action( 'switch_theme', array( &$this, 'update_dismiss' ) );
             }
 
