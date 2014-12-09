@@ -21,7 +21,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "WMC\\Wordpress\\RequiredPlugins": "src/" }
+        "psr-4": { "WMC\\Wordpress\\RequiredPlugins\\": "src/" }
     },
     "require": {
         "wemakecustom/wp-mu-composer": "*",
